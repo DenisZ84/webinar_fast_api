@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="FastAPI, Docker, and Traefik")
+from app.core.config import settings
+
+app = FastAPI(title=settings.app_title)
 
 
 @app.get("/")
